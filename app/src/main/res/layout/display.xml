@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<!--<data>
+    <variable
+        name="display"
+        type="com.example.bmicalculator.Display"/>
+</data>-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Display"
+    android:background="#000000">
+    <TextView
+    android:id="@+id/res"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="50dp"
+    android:textStyle="bold"
+    android:textSize="100dp"
+    android:textColor="#E36614"
+    android:layout_marginTop="230dp"
+    android:letterSpacing=".05"
+    ></TextView>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/res"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="253dp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/res2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_toRightOf="@id/res"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="#E36614"
+        android:layout_marginTop="2dp"
+        android:letterSpacing=".05"
+        ></TextView>
+
+
+</RelativeLayout>
+</layout>

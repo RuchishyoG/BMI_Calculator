@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F3D4E"
+    tools:context=".MainActivity">
+
+     <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BODY MASS INDEX"
+        android:textColor="#EAF12D"
+        android:textSize="38dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:letterSpacing=".08">
+    </TextView>
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter height in cm"
+        android:textColorHint="#FFFFFF"
+        android:textSize="25dp"
+        android:textStyle="italic"
+        android:fadingEdge="vertical"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Title"
+        android:layout_marginTop="130dp"
+        android:letterSpacing=".15">
+    </EditText>
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter weight in kg"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/height"
+        android:layout_marginTop="45dp"
+        android:letterSpacing=".15">
+    </EditText>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="GO"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:background="#52503A"
+        android:textColor="#EAF12D"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/weight"
+        android:layout_marginTop="100dp"
+        android:padding="10dp"
+        android:letterSpacing=".2"
+        ></Button>
+
+</RelativeLayout>
