@@ -10,9 +10,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static double bmi;
-    public static double ht;
-    public static double wt;
     public static String h,w;
     EditText height,weight;
     Button cal;
@@ -30,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
                 h = height.getText().toString();
                 w = weight.getText().toString();
                 if (h != null && !h.equals("") && w != null && !w.equals("")) {
-                    startActivity(new Intent(MainActivity.this, Display.class));
+                    Intent i=new Intent(MainActivity.this, Display.class);
+                    i.putExtra("height", h);
+                    i.putExtra("weight", w);
                 } else
                     Toast.makeText(MainActivity.this, "Please Enter Height and Weight", Toast.LENGTH_SHORT).show();
             }
