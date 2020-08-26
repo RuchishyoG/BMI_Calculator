@@ -13,15 +13,17 @@ import java.text.DecimalFormat;
 public class Display extends AppCompatActivity {
 
     public double bmi, ht, wt;
-    public String status,BMI;
+    public String h,w,status,BMI;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display);
         Intent it=getIntent();
-        ht = it.getExtras().getDouble("height");
-        wt = it.getExtras().getDouble("weight");
+        h = it.getStringExtra("height");
+        w = it.getStringExtra("weight");
+        ht= Double.parseDouble(h);
+        wt= Double.parseDouble(w);
         bmi = wt / (ht * ht);
         DecimalFormat df= new DecimalFormat("#.#");
         df.setRoundingMode(RoundingMode.HALF_DOWN);
@@ -36,5 +38,6 @@ public class Display extends AppCompatActivity {
             status = "Overweight";
         TextView Stat = (TextView) findViewById(R.id.res2);
         Stat.setText(status);
+
     }
 }
